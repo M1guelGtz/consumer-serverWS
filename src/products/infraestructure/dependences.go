@@ -17,7 +17,6 @@ func Init() {
 		log.Println("Servidor WebSocket escuchando en :3500")
 		log.Fatal(http.ListenAndServe(":3500", nil))
 	}()
-
 	conn, err := amqp.Dial("amqp://miguel:7s0725FLU2@50.19.162.154:5672/")
 	if err != nil {
 		log.Fatalf("Error al conectar a RabbitMQ: %v", err)

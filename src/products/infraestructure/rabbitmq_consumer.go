@@ -135,6 +135,7 @@ func WebSocketHandler(w http.ResponseWriter, r *http.Request) {
 	mutex.Unlock()
 
 	log.Println("Nueva conexión WebSocket establecida.")
+	notifyClients("Conexion establecida Bienvenido")
 }
 
 // Función para notificar al frontend
